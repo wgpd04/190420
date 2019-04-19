@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Member Lab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Member List</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>MemberID</th>
+        <th>Name</th>
+        <th>City</th>
+        <ht>&nbsp;</ht>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i in rows) { %>
+      <tr>
+        <td><%= rows[i].memberId %></td>
+        <td><%= rows[i].memberName %></td>
+        <td><%= rows[i].memberCity %></td>
+        <td><a href="/member/edit?id=<%= rows[i].memberId %>">Edit</a></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

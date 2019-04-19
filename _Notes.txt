@@ -1,0 +1,6 @@
+快速入門：使用 REST API 和 JavaScript 偵測影像中的人臉
+https://docs.microsoft.com/zh-tw/azure/cognitive-services/Face/quickstarts/javascript
+
+使用語音 SDK 在瀏覽器中以 JavaScript 辨識語音
+https://docs.microsoft.com/zh-tw/azure/cognitive-services/speech-service/quickstart-js-browser
+<Question> 似乎聽不懂中文，你能修正這個問題嗎?

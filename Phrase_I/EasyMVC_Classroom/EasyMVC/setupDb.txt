@@ -1,0 +1,19 @@
+create database easyMvcDb;
+
+use easyMvcDb;
+
+create table member
+(
+  memberId int primary key,
+  memberName varchar(20),
+  memberCity int
+);
+
+-- truncate table member;
+
+insert into member values 
+  (1, 'Chien', 2),
+  (2, 'Jeter', 4),
+  (7, 'Jeremy', 6);
+  
+select * from member;

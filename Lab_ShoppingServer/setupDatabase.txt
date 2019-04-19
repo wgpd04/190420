@@ -1,0 +1,14 @@
+create database shoppingDb default character set utf8;
+
+use shoppingDb;
+
+create table shopping
+(
+  clientID varchar(20),
+  shoppingList varchar(4096)
+);
+
+insert into shopping values (671990, '[{name: "Pencil x 36", select: 0}, {name: "Milk", select: 0}]');
+
+select * from shopping;
+

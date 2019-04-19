@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Member Lab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<form class="form-horizontal" method="post" action="/member/post_edit">
+  <input type="hidden" name="memberId" value="<%= rows[0].memberId %>">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form Name</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="memberName">Member Name:</label>  
+  <div class="col-md-4">
+  <input id="memberName" name="memberName" type="text" 
+     placeholder="" class="form-control input-md"
+     value="<%= rows[0].memberName %>"
+     >
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="memberCity">City:</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="memberCity-0">
+      <input type="radio" name="memberCity" id="memberCity-0" value="2"  <%= ( (rows[0].memberCity == 2) ? "checked" : "" ) %> >
+      TaiPei
+    </label> 
+    <label class="radio-inline" for="memberCity-1">
+      <input type="radio" name="memberCity" id="memberCity-1" value="4"  <%= ( (rows[0].memberCity == 4) ? "checked" : "" ) %> >
+      TaiChung
+    </label> 
+    <label class="radio-inline" for="memberCity-2">
+      <input type="radio" name="memberCity" id="memberCity-2" value="6"  <%= ( (rows[0].memberCity == 6) ? "checked" : "" ) %> >
+      TaiNan
+    </label>
+  </div>
+</div>
+
+<input type="submit" value="OK" name="okButton" class="button btn-lg btn-success"></input>
+
+</fieldset>
+</form>
+
+
+</body>
+</html>
